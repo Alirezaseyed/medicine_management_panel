@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل مدیریت زمان مصرف دارو</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>پنل مدیریت زمان مصرف دارو</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('dashboard')">داشبورد</a></li>
+                <li><a href="#" onclick="showSection('manage')">مدیریت داروها</a></li>
+                <li><a href="#" onclick="showSection('calendar')">تقویم مصرف</a></li>
+                <li><a href="#" onclick="showSection('reminders')">هشدارها</a></li>
+                <li><a href="#" onclick="showSection('reports')">گزارش‌ها</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="dashboard">
+                <h2>داشبورد</h2>
+                <div class="content">
+                    <p>سلام، [نام کاربر]</p>
+                    <p>داروهای امروز:</p>
+                    <ul id="today-meds">
+                        <!-- داروها به صورت پویا اضافه خواهند شد -->
+                    </ul>
+                </div>
+            </section>
+            <section id="manage" class="hidden">
+                <h2>مدیریت داروها</h2>
+                <div class="content">
+                    <button onclick="addMedicine()">افزودن داروی جدید</button>
+                    <ul id="med-list">
+                        <!-- لیست داروها به صورت پویا اضافه خواهند شد -->
+                    </ul>
+                </div>
+            </section>
+            <section id="calendar" class="hidden">
+                <h2>تقویم مصرف دارو</h2>
+                <div class="content">
+                    <button onclick="showCalendar('daily')">نمایش روزانه</button>
+                    <button onclick="showCalendar('weekly')">نمایش هفتگی</button>
+                    <button onclick="showCalendar('monthly')">نمایش ماهانه</button>
+                    <div id="calendar-content">
+                        <!-- محتوای تقویم به صورت پویا اضافه خواهد شد -->
+                    </div>
+                </div>
+            </section>
+            <section id="reminders" class="hidden">
+                <h2>هشدارها و یادآورها</h2>
+                <div class="content">
+                    <button onclick="addReminder()">افزودن یادآور جدید</button>
+                    <ul id="reminder-list">
+                        <!-- لیست یادآورها به صورت پویا اضافه خواهند شد -->
+                    </ul>
+                </div>
+            </section>
+            <section id="reports" class="hidden">
+                <h2>گزارش‌ها</h2>
+                <div class="content">
+                    <button onclick="showReport('daily')">مشاهده گزارش روزانه</button>
+                    <button onclick="showReport('weekly')">مشاهده گزارش هفتگی</button>
+                    <button onclick="showReport('monthly')">مشاهده گزارش ماهانه</button>
+                    <div id="report-content">
+                        <!-- محتوای گزارش به صورت پویا اضافه خواهد شد -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+    
